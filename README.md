@@ -120,7 +120,7 @@ Identify persistence using Windows Registry Run Keys.
 ### KQL
 
 ```kql
-event.code:13 AND message:"*\\Run\\*"
+event.code:13 AND message:"*\Run\*"
 ```
 
 ### Why Event ID 13?
@@ -129,7 +129,7 @@ Sysmon Event ID 13 records Registry Value Set events.
 
 ### Why search `message`?
 
-The message field contains the registry path. Searching for `\\Run\\` isolates registry modifications affecting Windows Run Keys.
+The message field contains the registry path. Searching for `\Run\` isolates registry modifications affecting Windows Run Keys.
 
 ### Additional Fields
 
