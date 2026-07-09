@@ -1,4 +1,4 @@
-# Hunting for Stuxbot (Round 2)
+# Hunting for Stuxbot
 ## Threat Hunting Investigation using Elastic SIEM
 
 ![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red)
