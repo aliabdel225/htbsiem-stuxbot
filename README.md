@@ -104,7 +104,7 @@ The investigation identified several offensive security tools:
 The transferred tool beginning with **R** was **Rubeus.exe**, created under the **svc-sql1** account.
 
 **Insert screenshots here**
-<img width="1437" height="1404" alt="image" src="https://github.com/user-attachments/assets/707da400-89a9-483e-b011-03be66b7d454" />
+<img width="1004" height="981" alt="image" src="https://github.com/user-attachments/assets/13cf31a9-3c14-4ab9-a4ab-5d37c86c39e7" />
 <img width="1397" height="811" alt="image" src="https://github.com/user-attachments/assets/630b2bcb-c1b0-4469-b1a4-8ee345b189de" />
 
 
