@@ -64,6 +64,7 @@ The investigation was performed using Windows Event Logs, Sysmon, and PowerShell
 ---
 
 # Hunt 1 – Lateral Tool Transfer
+<img width="1437" height="1544" alt="image" src="https://github.com/user-attachments/assets/a8dc592b-6749-43d9-aba7-821bfa857de2" />
 
 ## Objective
 
@@ -72,7 +73,7 @@ Determine whether Stuxbot staged tools inside `C:\Users\Public`.
 ### KQL
 
 ```kql
-event.code:11 AND message:"*\\Users\\Public\\*"
+event.code:11 AND message:"*\Users\Public\*"
 ```
 
 ### Why Event ID 11?
@@ -103,13 +104,14 @@ The investigation identified several offensive security tools:
 The transferred tool beginning with **R** was **Rubeus.exe**, created under the **svc-sql1** account.
 
 **Insert screenshots here**
-- `Screenshots/hunt1/01-query.png`
-- `Screenshots/hunt1/02-results.png`
-- `Screenshots/hunt1/03-tools.png`
+<img width="1437" height="1404" alt="image" src="https://github.com/user-attachments/assets/707da400-89a9-483e-b011-03be66b7d454" />
+<img width="1397" height="811" alt="image" src="https://github.com/user-attachments/assets/630b2bcb-c1b0-4469-b1a4-8ee345b189de" />
+
 
 ---
 
 # Hunt 2 – Registry Run Keys
+<img width="1429" height="1546" alt="image" src="https://github.com/user-attachments/assets/b6ec859f-552d-4ab2-b842-eb737466956d" />
 
 ## Objective
 
@@ -145,9 +147,9 @@ LgvHsviAUVTsIN
 The randomly generated value name strongly suggests malware persistence rather than legitimate software.
 
 **Insert screenshots here**
-- `Screenshots/hunt2/01-query.png`
-- `Screenshots/hunt2/02-results.png`
-- `Screenshots/hunt2/03-first-persistence.png`
+<img width="1417" height="1064" alt="image" src="https://github.com/user-attachments/assets/a7c06f8d-166e-43f6-8dca-4020dddccabe" />
+<img width="1412" height="1137" alt="image" src="https://github.com/user-attachments/assets/acd7f59d-bf62-467e-aefc-4ca43b36eef0" />
+
 
 ---
 
@@ -178,8 +180,9 @@ Enter-PSSession dc1
 This indicates the attacker initiated a remote PowerShell session to **DC1**, using the compromised **svc-sql1** account.
 
 **Insert screenshots here**
-- `Screenshots/hunt3/01-query.png`
-- `Screenshots/hunt3/02-scriptblock.png`
+<img width="1420" height="1062" alt="image" src="https://github.com/user-attachments/assets/9addef62-d08e-41b9-a608-9050e360fbd5" />
+<img width="1352" height="724" alt="image" src="https://github.com/user-attachments/assets/500a7944-b531-42b7-a6e8-10b268e14724" />
+
 
 ---
 
